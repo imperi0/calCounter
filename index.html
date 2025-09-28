@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Calorie Tracker</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<nav>
+  <a onclick="showPage('home')">Home</a>
+  <a onclick="showPage('tracker')">Track Food</a>
+  <a onclick="showPage('about')">About</a>
+</nav>
+
+<section id="home" class="container">
+  <h1>Welcome!</h1>
+  <p style="text-align:center;">Track meals, calculate calories, and get your daily recommendation.</p>
+  <button class="btn" onclick="showPage('tracker')">Start Tracking</button>
+</section>
+
+<section id="tracker" class="container hidden">
+  <h1>Food Tracker & Calorie Recommendation</h1>
+
+  <div class="card">
+    <h3>Calorie Recommendation</h3>
+    <form id="recommendForm">
+      <label>Age (years):</label>
+      <input type="number" id="age" required>
+
+      <label>Gender:</label>
+      <select id="gender" required>
+        <option value="">Select</option>
+        <option value="male">Male</option>
+        <option value="female">Female</option>
+      </select>
+
+      <label>Height (cm):</label>
+      <input type="number" id="height" required>
+
+      <label>Weight (kg):</label>
+      <input type="number" id="weight" required>
+
+      <label>Activity level:</label>
+      <select id="activity" required>
+        <option value="">Select</option>
+        <option value="1.2">Sedentary (little/no exercise)</option>
+        <option value="1.375">Light (1-3 days/week)</option>
+        <option value="1.55">Moderate (3-5 days/week)</option>
+        <option value="1.725">Active (6-7 days/week)</option>
+        <option value="1.9">Very active (physical job)</option>
+      </select>
+
+      <button type="submit" class="btn">Calculate</button>
+    </form>
+    <div id="calorieRec" class="recommendation hidden"></div>
+  </div>
+
+  <div class="card">
+    <h3>Track Your Food Intake</h3>
+    <form id="foodForm">
+      <label>Date:</label>
+      <input type="date" id="trackDate" required>
+
+      <label>Food:</label>
+      <select id="foodSelect" onchange="toggleCustomFood()">
+        <option value="rice">Rice</option>
+        <option value="bread">Bread</option>
+        <option value="chicken">Chicken</option>
+        <option value="apple">Apple</option>
+        <option value="banana">Banana</option>
+        <option value="egg">Egg</option>
+        <option value="custom">Add your own food</option>
+      </select>
+
+      <div id="customFoodDiv" class="hidden">
+        <label>Food name:</label>
+        <input type="text" id="customFoodName" placeholder="e.g. Ice Cream">
+        <label>Calories per 100g:</label>
+        <input type="number" id="customFoodCal" placeholder="e.g. 207">
+        <p class="tip">Only fill this for custom foods.</p>
+      </div>
+
+      <label>Quantity (grams):</label>
+      <input type="number" id="quantity" placeholder="Enter quantity in grams" required>
+
+      <button type="submit" class="btn">Add Food</button>
+    </form>
+
+    <h3>Daily Summary</h3>
+    <table id="entriesTable">
+      <thead>
+        <tr><th>Date</th><th>Food</th><th>Quantity (g)</th><th>Calories</th></tr>
+      </thead>
+      <tbody></tbody>
+      <tfoot id="totalsFooter"></tfoot>
+    </table>
+  </div>
+</section>
+
+<section id="about" class="container hidden">
+  <h1>About</h1>
+  <p>This calorie tracker lets you:</p>
+  <ul>
+    <li>Select predefined foods or add custom ones.</li>
+    <li>Enter quantity in grams to calculate calories automatically.</li>
+    <li>See daily table with totals and calories per day.</li>
+    <li>Get recommended daily calorie intake based on your stats.</li>
+  </ul>
+</section>
+
+<script src="script.js"></script>
+</body>
+</html>
