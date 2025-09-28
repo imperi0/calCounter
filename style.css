@@ -1,0 +1,140 @@
+body {
+  font-family:'Segoe UI', sans-serif;
+  margin:0;
+  background:#ffe5e5;
+  color:#333;
+}
+
+nav {
+  background:#e53935;
+  padding:1em;
+  text-align:center;
+}
+
+nav a {
+  color:white;
+  margin:0 15px;
+  text-decoration:none;
+  font-weight:500;
+  cursor:pointer;
+}
+
+nav a:hover {
+  color:#ffeb3b;
+}
+
+.container {
+  max-width:700px;
+  margin:40px auto;
+  padding:30px;
+  background:white;
+  border-radius:12px;
+  box-shadow:0 6px 15px rgba(0,0,0,0.08);
+}
+
+h1 {
+  color:#e53935;
+  text-align:center;
+  margin-bottom:20px;
+}
+
+h3 {
+  color:#c62828;
+  margin-bottom:12px;
+}
+
+label {
+  display:block;
+  margin:10px 0 5px;
+  font-weight:500;
+}
+
+input, select {
+  width:100%;
+  padding:12px;
+  border-radius:8px;
+  border:1px solid #ccc;
+  font-size:0.95em;
+}
+
+input:focus, select:focus {
+  border-color:#e53935;
+  outline:none;
+}
+
+.btn {
+  margin-top:20px;
+  padding:14px;
+  width:100%;
+  background:#e53935;
+  color:white;
+  font-weight:600;
+  border:none;
+  border-radius:8px;
+  cursor:pointer;
+}
+
+.btn:hover {
+  background:#d32f2f;
+}
+
+.hidden {
+  display:none;
+}
+
+.card {
+  padding:20px;
+  margin:15px 0;
+  background:#fff0f0;
+  border-radius:10px;
+}
+
+table {
+  width:100%;
+  border-collapse:collapse;
+  margin-top:20px;
+}
+
+th, td {
+  padding:12px;
+  text-align:left;
+  border:1px solid #ccc;
+}
+
+th {
+  background:#ffcdd2;
+}
+
+tbody tr:nth-child(odd) {
+  background:#fff0f0;
+}
+
+tfoot td {
+  font-weight:bold;
+  background:#ffe0e0;
+}
+
+#customFoodDiv {
+  margin-top:15px;
+  padding:12px;
+  background:#ffebee;
+  border-radius:8px;
+}
+
+.tip {
+  font-size:0.85em;
+  color:#555;
+  font-style:italic;
+  margin-top:4px;
+}
+
+.recommendation {
+  background:#ffebee;
+  padding:15px;
+  border-radius:10px;
+  margin-top:20px;
+  font-weight:600;
+  text-align:center;
+  border:1px solid #e53935;
+  color:#c62828;
+}
